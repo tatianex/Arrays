@@ -26,11 +26,9 @@ namespace arrays {
                     case 5:
                         ExerciseFive.Five(null);
                         break;
-                    /*
                     case 6:
                         ExerciseSix.Six(null);
                         break;
-                    */
                     default:
                         break;
                 }
