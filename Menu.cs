@@ -20,10 +20,10 @@ namespace arrays {
                      case 3:
                         ExerciseThree.Three(null);
                         break;
-                    /*
                     case 4:
                         ExerciseFour.Four(null);
                         break;
+                    /*
                     case 5:
                         ExerciseFive.Five(null);
                         break;
