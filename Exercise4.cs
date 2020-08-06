@@ -8,13 +8,27 @@ namespace arrays {
             Console.WriteLine("Exercício 4.\nLeia dois arrays A e B com 10 elementos.");
             Console.WriteLine("Em seguida, compare os arrays e verifique se os mesmos são iguais ou diferentes.\n");
 
-            int[] a = new int[10] {13, 22, 8, 40, 31, 25, 49, 20, 68, 82};
-            int[] b = new int[10] {13, 22, 8, 40, 31, 25, 49, 20, 68, 82};
-            //int[] b = new int[10] {57, 3, 6, 32, 16, 19, 43, 27, 54, 73};
+            var a = new double[10];
+            var b = new double[10];
 
-            foreach (int element in a) Console.Write($"{element}, ");
+            for (int i = 0; i < a.Length; i++){
+                Console.WriteLine($"Informe o {i + 1}º número");
+                var result = Double.Parse(Console.ReadLine());
+                a[i] = result;
+            }
+
             Console.WriteLine("\n");
-            foreach (int element in b) Console.Write($"{element}, ");
+
+            for (int i = 0; i < b.Length; i++){
+                Console.WriteLine($"Informe o {i + 1}º número");
+                var result = Double.Parse(Console.ReadLine());
+                b[i] = result;
+            }
+
+            foreach (int item in a) Console.Write($"{item}, ");
+            Console.WriteLine("\n");
+
+            foreach (int item in b) Console.Write($"{item}, ");
             Console.WriteLine("\n");
 
             bool isEqual = Enumerable.SequenceEqual(a, b);
