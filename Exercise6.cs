@@ -33,24 +33,26 @@ namespace arrays {
                 b[i] = Double.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("\nArray a. Em ordem crescente");
+            Console.WriteLine("\nArray A. Em ordem crescente");
             Array.Sort(a);
             foreach (int value in a) Console.Write($"{value}, ");
             Console.WriteLine("\n");
 
-            Console.WriteLine("Array b. Em ordem decrescente");
+            Console.WriteLine("Array B. Em ordem decrescente");
             Array.Sort(b);
             Array.Reverse(b);
             foreach (int value in b) Console.Write($"{value}, ");
             Console.WriteLine("\n");
 
-            Console.WriteLine("Array c. Soma dos valores correspondentes de a + b em ordem crescente.");
+            // soma a + b nas posições correspondentes, e popula o array c com o resultado
             for (int i = 0; i < arraysLenght; i++) {
                 c[i] = a[i] + b[i];
-                Array.Sort(c);
-                Console.Write($"{c[i]}, ");
             }
- 
+
+            Console.WriteLine("Array C. Soma dos valores correspondentes de a + b, em ordem crescente.");
+            Array.Sort(c);
+            foreach (int value in c) Console.Write($"{value}, ");
+
             Console.ReadLine();
         }
     }
