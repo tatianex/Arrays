@@ -8,7 +8,7 @@ namespace arrays {
             Console.WriteLine("Exercício 4.\nLeia dois arrays A e B com 10 elementos.");
             Console.WriteLine("Em seguida, compare os arrays e verifique se os mesmos são iguais ou diferentes.\n");
 
-            const int arraysLength = 3;
+            const int arraysLength = 10;
 
             var a = new double?[arraysLength];
             var b = new double[arraysLength];

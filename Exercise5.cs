@@ -8,10 +8,15 @@ namespace arrays {
             Console.WriteLine("e calcule a média aritmética dos mesmos, em seguida,");
             Console.WriteLine("diga quantos dos elementos lidos estão abaixo, acima e na média.");
 
-            int[] a = new int[15] {19, 11, 6, 14, 4, 21, 56, 36, 31, 45, 40, 37, 52, 28, 59};
-
+            const int arrayLength = 15;
+            var a = new double[arrayLength];
             int sum = 0;
             double average = 0.0d;
+
+            for (int i = 0; i < arrayLength; i++) {
+                Console.WriteLine($"Informe o {i + 1}º número da lista");
+                a[i] = Double.Parse(Console.ReadLine());
+            }
 
             foreach (int value in a) sum += value;
             average = sum / a.Length;
