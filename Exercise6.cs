@@ -6,30 +6,48 @@ namespace arrays {
         {
             Console.WriteLine(String.Join(
                 Environment.NewLine,
-                "Exercício 6.",
+                "\nExercício 6.",
                 "Leia um array A com 12 elementos.",
                 "Após sua leitura, colocar os seus elementos em ordem crescente.",
                 "Depois ler um array B também com doze elementos,",
                 "colocar os elementos de B em ordem decrescente.",
                 "Construir um array C, onde cada elemento de C é a soma do elemento correspondente de A com B.",
-                "Colocar em ordem crescente a matriz C e apresentar os seus valores."
+                "Colocar em ordem crescente a matriz C e apresentar os seus valores.\n"
             ));
 
-            int[] a = new int[12] {15, 58, 21, 9, 30, 21, 28, 11, 36, 29, 42, 53};
-            int[] b = new int[12] {19, 5, 45, 24, 35, 14, 12, 28, 39, 40, 8, 51};
-            int[] c = new int[12];
+            const int arraysLenght = 3;
 
-            Array.Sort(a);
-            foreach (int element in a) Console.Write($"{element}, ");
+            var a = new double[arraysLenght];
+            var b = new double[arraysLenght];
+            var c = new double[arraysLenght];
+
+            for (int i = 0; i < arraysLenght; i++) {
+                Console.WriteLine($"Informe o {i + 1}º número da primeira lista");
+                a[i] = Double.Parse(Console.ReadLine());
+            }
+            
             Console.WriteLine("\n");
 
+            for (int i = 0; i < arraysLenght; i++) {
+                Console.WriteLine($"Informe o {i + 1}º número da segunda lista");
+                b[i] = Double.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("\nArray a. Em ordem crescente");
+            Array.Sort(a);
+            foreach (int value in a) Console.Write($"{value}, ");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Array b. Em ordem decrescente");
             Array.Sort(b);
             Array.Reverse(b);
-            foreach (int element in b) Console.Write($"{element}, ");
+            foreach (int value in b) Console.Write($"{value}, ");
             Console.WriteLine("\n");
 
-            for (int i = 0; i < 12; i++) {
+            Console.WriteLine("Array c. Soma dos valores correspondentes de a + b em ordem crescente.");
+            for (int i = 0; i < arraysLenght; i++) {
                 c[i] = a[i] + b[i];
+                Array.Sort(c);
                 Console.Write($"{c[i]}, ");
             }
  
