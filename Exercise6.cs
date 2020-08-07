@@ -15,7 +15,7 @@ namespace arrays {
                 "Colocar em ordem crescente a matriz C e apresentar os seus valores.\n"
             ));
 
-            const int arraysLenght = 3;
+            const int arraysLenght = 12;
 
             var a = new double[arraysLenght];
             var b = new double[arraysLenght];
