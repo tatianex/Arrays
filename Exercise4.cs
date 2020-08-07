@@ -8,21 +8,21 @@ namespace arrays {
             Console.WriteLine("Exercício 4.\nLeia dois arrays A e B com 10 elementos.");
             Console.WriteLine("Em seguida, compare os arrays e verifique se os mesmos são iguais ou diferentes.\n");
 
-            var a = new double[10];
-            var b = new double[10];
+            const int arraysLength = 3;
 
-            for (int i = 0; i < a.Length; i++){
-                Console.WriteLine($"Informe o {i + 1}º número");
-                var result = Double.Parse(Console.ReadLine());
-                a[i] = result;
+            var a = new double?[arraysLength];
+            var b = new double[arraysLength];
+
+            for (int i = 0; i < arraysLength; i++){
+                Console.WriteLine($"Informe o {i + 1}º número do primeiro array");
+                a[i] = Double.Parse(Console.ReadLine());
             }
 
             Console.WriteLine("\n");
 
-            for (int i = 0; i < b.Length; i++){
-                Console.WriteLine($"Informe o {i + 1}º número");
-                var result = Double.Parse(Console.ReadLine());
-                b[i] = result;
+            for (int i = 0; i < arraysLength; i++){
+                Console.WriteLine($"Informe o {i + 1}º número do segundo array");
+                b[i] = Double.Parse(Console.ReadLine());
             }
 
             foreach (int item in a) Console.Write($"{item}, ");
@@ -31,10 +31,23 @@ namespace arrays {
             foreach (int item in b) Console.Write($"{item}, ");
             Console.WriteLine("\n");
 
-            bool isEqual = Enumerable.SequenceEqual(a, b);
+            var isEqual = false;
+            var ArraysAreEqual = false;
 
-            if (isEqual == true) Console.WriteLine("São iguais.");
-            else Console.WriteLine("São diferentes.");
+            for (int i = 0; i < arraysLength; i++) {
+                for (int j = 0; j < arraysLength; j++) {
+                    if (a[i] == b[j]) {
+                        isEqual = true;
+                        a[i] = null;
+                        break;
+                    }
+                }
+            }
+
+            if (!isEqual) ArraysAreEqual = false;
+
+            var message = ArraysAreEqual ? "Os arrays são iguais." : "Os arrays são diferentes.";
+            Console.WriteLine(message);
 
             Console.ReadLine();
         }

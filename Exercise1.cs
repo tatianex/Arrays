@@ -7,7 +7,7 @@ namespace arrays {
             Console.Write("Exercício 1.\nLeia dois arrays A e B com 15 elementos.\n");
             Console.WriteLine("Construir um array C, onde cada elemento de C é a subtração do elemento correspondente de A com B.\n");
 
-            const int arraysLenght = 3;
+            const int arraysLenght = 15;
 
             var a = new double[arraysLenght];
             var b = new double[arraysLenght];

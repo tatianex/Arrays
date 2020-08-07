@@ -6,7 +6,7 @@ namespace arrays {
         {
             Console.WriteLine("\nLer um array com dez inteiros e mostrar os números na ordem direta e inversa que foram lidos.\n");
 
-            const int arraysLenght = 3;
+            const int arraysLenght = 10;
 
             var x = new double[arraysLenght];
 

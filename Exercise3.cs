@@ -9,10 +9,18 @@ namespace arrays {
             Console.WriteLine("Caso, seja verdade imprima a mensagem: “O número existe no array”");
             Console.WriteLine("caso contrário “Número inexistente”.\n");
 
-            int[] a = new int[10] {19, 5, 45, 24, 35, 14, 12, 28, 39, 40};
+            const int arraysLenght = 10;
 
+            var a = new double[arraysLenght];
+
+            for (int i = 0; i < arraysLenght; i++) {
+                Console.WriteLine($"Informe o {i + 1}º número da lista");
+                a[i] = Double.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("\n");
             Console.WriteLine("Informe o número que deseja consultar: ");
-            int request = Convert.ToInt32(Console.ReadLine());
+            double request = Double.Parse(Console.ReadLine());
             int index = Array.IndexOf(a, request);
 
             if (index != -1) {
