@@ -11,8 +11,17 @@ namespace arrays {
             var x = new double[arraysLenght];
 
             for (int i = 0; i < arraysLenght; i++) {
-                Console.WriteLine($"Informe o {i + 1}º número");
-                x[i] = Double.Parse(Console.ReadLine());
+                var validNumber = false;
+                while (!validNumber) {
+                    Console.WriteLine($"Informe o {i + 1}º número");
+                    try {
+                        x[i] = Double.Parse(Console.ReadLine());
+                        validNumber = true;
+                    }
+                    catch (System.Exception) {
+                        Console.WriteLine("Por favor informe um número válido.");
+                    }
+                }
             }
 
             Console.WriteLine("\n");
