@@ -14,15 +14,33 @@ namespace arrays {
             var c = new double[arraysLenght];
 
             for (int i = 0; i < arraysLenght; i++) {
-                Console.WriteLine($"Informe o {i + 1}º número da primeira lista");
-                a[i] = Double.Parse(Console.ReadLine());
+                var isValidNumber = false;
+                while (!isValidNumber) {
+                    Console.WriteLine($"Informe o {i + 1}º número da primeira lista");
+                    try {
+                        a[i] = Double.Parse(Console.ReadLine());
+                        isValidNumber = true;
+                    }
+                    catch (System.Exception) {
+                        Console.WriteLine("Por favor informe um número válido.");
+                    }
+                }
             }
             
             Console.WriteLine("\n");
 
             for (int i = 0; i < arraysLenght; i++) {
-                Console.WriteLine($"Informe o {i + 1}º número da segunda lista");
-                b[i] = Double.Parse(Console.ReadLine());
+                var isValidNumber = false;
+                while (!isValidNumber) {
+                    Console.WriteLine($"Informe o {i + 1}º número da segunda lista");
+                    try {
+                        b[i] = Double.Parse(Console.ReadLine());
+                        isValidNumber = true;
+                    }
+                    catch (System.Exception) {
+                        Console.WriteLine("Por favor informe um númeor válido.");
+                    }
+                }
             }
 
             Console.WriteLine("\nA primeira lista contém: ");
