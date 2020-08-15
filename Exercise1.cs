@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace arrays {
     class ExerciseOne {
@@ -7,11 +8,12 @@ namespace arrays {
             Console.Write("Exercício 1.\nLeia dois arrays A e B com 15 elementos.\n");
             Console.WriteLine("Construir um array C, onde cada elemento de C é a subtração do elemento correspondente de A com B.\n");
 
-            const int arraysLenght = 15;
+            const int arraysLenght = 5;
 
             var a = new double[arraysLenght];
             var b = new double[arraysLenght];
             var c = new double[arraysLenght];
+            var outputc = new StringBuilder();
 
             for (int i = 0; i < arraysLenght; i++) {
                 var isValidNumber = false;
@@ -43,16 +45,13 @@ namespace arrays {
                 }
             }
 
-            Console.WriteLine("\nA primeira lista contém: ");
-            foreach (double value in a) Console.Write($"{value}, ");
-            Console.WriteLine("\nA segunda lista contém: ");
-            foreach (double value in b) Console.Write($"{value}, ");
-
-            Console.WriteLine("\nA terceira lista contém: ");
             for (int i = 0; i < arraysLenght; i++) {
                 c[i] = a[i] - b[i];
-                Console.Write($"{c[i]}, ");
+                outputc.Append($"{c[i]} ");
             }
+
+            Console.WriteLine("\nA terceira lista contém: ");
+            Console.WriteLine(outputc);
 
             Console.ReadLine();
         }

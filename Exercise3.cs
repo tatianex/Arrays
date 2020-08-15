@@ -14,13 +14,28 @@ namespace arrays {
             var a = new double[arraysLenght];
 
             for (int i = 0; i < arraysLenght; i++) {
-                Console.WriteLine($"Informe o {i + 1}º número da lista");
-                a[i] = Double.Parse(Console.ReadLine());
+                var validNumber = false;
+                while (!validNumber) {
+                    Console.WriteLine($"Informe o {i + 1}º número da lista");
+                    try {
+                        a[i] = Double.Parse(Console.ReadLine());
+                        validNumber = true;
+                    }
+                    catch (System.Exception) {
+                        Console.WriteLine("Por favor informe um valor válido");
+                    }
+                }
             }
 
             Console.WriteLine("\n");
             Console.WriteLine("Informe o número que deseja consultar: ");
-            double request = Double.Parse(Console.ReadLine());
+            double request = 0;
+            try {
+                request = Double.Parse(Console.ReadLine());
+            }
+            catch (System.Exception) {
+                Console.WriteLine("Por favor informe um número válido.");
+            }
             int index = Array.IndexOf(a, request);
 
             if (index != -1) {
