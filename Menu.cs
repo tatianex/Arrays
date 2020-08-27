@@ -33,8 +33,7 @@ namespace arrays {
                         break;
                 }
 
-                if(choice == 0) break;
-
+                if (choice == 0) break;
             }
         }
     }
