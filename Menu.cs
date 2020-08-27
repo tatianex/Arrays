@@ -5,12 +5,12 @@ namespace arrays {
         {
             int choice = 0;
 
-            while(true){
+            while (true) {
 
                 Console.WriteLine("\nEste projeto contém 6 Exercícios. \nDigite um número para ver a solução. \nDigite 0 para sair.\n");
                 choice = Convert.ToInt32(Console.ReadLine());
 
-                switch (choice){
+                switch (choice) {
                     case 1:
                         ExerciseOne.One(null);
                         break;
@@ -32,9 +32,9 @@ namespace arrays {
                     default:
                         break;
                 }
-                if(choice == 0){
-                    break;
-                }
+
+                if(choice == 0) break;
+
             }
         }
     }
