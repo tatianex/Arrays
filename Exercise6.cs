@@ -46,12 +46,13 @@ namespace arrays {
 
             // soma a + b nas posições correspondentes, e popula o array c com o resultado
             for (int i = 0; i < arraysLenght; i++) {
-                c[i] = a[i] + b[i];
+                var sum = a[i] + b[i];
+                c[i] = Math.Round(sum, 2);
             }
 
             Console.WriteLine("Array C. Soma dos valores correspondentes de a + b, em ordem crescente.");
             Array.Sort(c);
-            foreach (int value in c) Console.Write($"{value}, ");
+            foreach (double value in c) Console.Write($"{value}, ");
 
             Console.ReadLine();
         }
