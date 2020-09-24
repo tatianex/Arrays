@@ -40,7 +40,7 @@ namespace arrays {
                         isValidNumber = true;
                     }
                     catch (System.Exception) {
-                        Console.WriteLine("Por favor informe um númeor válido.");
+                        Console.WriteLine("Por favor informe um número válido.");
                     }
                 }
             }

@@ -10,7 +10,7 @@ namespace arrays {
 
             const int arrayLength = 15;
             var a = new double[arrayLength];
-            int sum = 0;
+            double sum = 0;
             double average = 0.0d;
 
             for (int i = 0; i < arrayLength; i++) {
@@ -18,7 +18,7 @@ namespace arrays {
                 a[i] = Double.Parse(Console.ReadLine());
             }
 
-            foreach (int value in a) sum += value;
+            foreach (double value in a) sum += value;
             average = sum / a.Length;
             
             Console.WriteLine($"A soma dos elementos do array é igual a: {sum}");
@@ -28,7 +28,7 @@ namespace arrays {
             int aboveAverage = 0;
             int equalAverage = 0;
             
-            foreach (int value in a) {
+            foreach (double value in a) {
                 if (value < average) belowAverage++;
                 else if (value > average) aboveAverage++;
                 else equalAverage++;
